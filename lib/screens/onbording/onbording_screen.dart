@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:go_jobs/constants.dart';
+import 'package:go_jobs/screens/auth/sign_in_screen.dart';
 
 class OnBordingScreen extends StatelessWidget {
   const OnBordingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print(Theme.of(context).brightness);
     return Scaffold(
       body: Column(
         children: [
           Expanded(
             child: Image.asset(
-              "assets/images/onbording_image_light_theme.png",
+              Theme.of(context).brightness == Brightness.light
+                  ? "assets/images/onbording_image_light_theme.png"
+                  : "assets/images/onbording_image_dark_theme.png.png",
               fit: BoxFit.cover,
             ),
           ),
@@ -39,16 +43,12 @@ class OnBordingScreen extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: primaryColor,
-                          padding: EdgeInsets.all(defaultPadding),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(defaultBorderRadius),
-                            ),
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignInScreen(),
                           ),
                         ),
-                        onPressed: () {},
                         child: Text("Get Started"),
                       ),
                     ),

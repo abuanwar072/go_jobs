@@ -7,6 +7,9 @@ ThemeData buildLightThemeData(BuildContext context) {
   return ThemeData(
     brightness: Brightness.light,
     primaryColor: primaryColor,
+    colorScheme: ThemeData.light()
+        .colorScheme
+        .copyWith(secondary: secondaryColorLightTheme),
     textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme)
         .copyWith(bodyText2: TextStyle(color: bodyTextColorLightTheme)),
     elevatedButtonTheme: elevatedButtonThemeData,
@@ -21,6 +24,8 @@ ThemeData buildLightThemeData(BuildContext context) {
 final darkThemeData = ThemeData(
   brightness: Brightness.dark,
   primaryColor: primaryColor,
+  colorScheme:
+      ThemeData.dark().colorScheme.copyWith(secondary: secondaryColorDarkTheme),
   scaffoldBackgroundColor: bgColorDarkTheme,
   textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme)
       .copyWith(bodyText2: TextStyle(color: bodyTextColorDarkTheme)),

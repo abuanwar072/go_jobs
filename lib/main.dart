@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Go Jobs',
-      theme: buildLightThemeData(context),
+      theme: lightThemeData,
       darkTheme: darkThemeData,
       themeMode: ThemeMode.dark,
       home: OnBordingScreen(),

@@ -3,23 +3,39 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'constants.dart';
 
-ThemeData buildLightThemeData(BuildContext context) {
-  return ThemeData(
-    brightness: Brightness.light,
-    primaryColor: primaryColor,
-    colorScheme: ThemeData.light()
-        .colorScheme
-        .copyWith(secondary: secondaryColorLightTheme),
-    textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme)
-        .copyWith(bodyText2: TextStyle(color: bodyTextColorLightTheme)),
-    elevatedButtonTheme: elevatedButtonThemeData,
-    inputDecorationTheme: InputDecorationTheme(
-      border: textFieldOutlineInputBorderLightTheme,
-      enabledBorder: textFieldOutlineInputBorderLightTheme,
-      focusedBorder: textFieldOutlineInputBorderLightTheme,
-    ),
-  );
-}
+final lightThemeData = ThemeData(
+  brightness: Brightness.light,
+  primaryColor: primaryColor,
+  colorScheme: ThemeData.light()
+      .colorScheme
+      .copyWith(secondary: secondaryColorLightTheme),
+  textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme)
+      .copyWith(bodyText2: TextStyle(color: bodyTextColorLightTheme)),
+  elevatedButtonTheme: elevatedButtonThemeData,
+  inputDecorationTheme: InputDecorationTheme(
+    border: textFieldOutlineInputBorderLightTheme,
+    enabledBorder: textFieldOutlineInputBorderLightTheme,
+    focusedBorder: textFieldOutlineInputBorderLightTheme,
+  ),
+);
+
+// ThemeData buildLightThemeData(BuildContext context) {
+//   return ThemeData(
+//     brightness: Brightness.light,
+//     primaryColor: primaryColor,
+//     colorScheme: ThemeData.light()
+//         .colorScheme
+//         .copyWith(secondary: secondaryColorLightTheme),
+//     textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme)
+//         .copyWith(bodyText2: TextStyle(color: bodyTextColorLightTheme)),
+//     elevatedButtonTheme: elevatedButtonThemeData,
+//     inputDecorationTheme: InputDecorationTheme(
+//       border: textFieldOutlineInputBorderLightTheme,
+//       enabledBorder: textFieldOutlineInputBorderLightTheme,
+//       focusedBorder: textFieldOutlineInputBorderLightTheme,
+//     ),
+//   );
+// }
 
 final darkThemeData = ThemeData(
   brightness: Brightness.dark,

@@ -34,6 +34,9 @@ dependencies:
   # allows you to easily use any of the 977 fonts from fonts.google.com
   google_fonts: ^2.1.0
 
+  # state management
+  get: ^4.1.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

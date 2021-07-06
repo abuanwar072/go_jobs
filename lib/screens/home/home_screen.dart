@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:go_jobs/constants.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,6 +9,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Get.textTheme.bodyText1!.color,
+        onPressed: () => Get.changeThemeMode(
+          Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
+        ),
+        child: Icon(Get.isDarkMode ? Icons.light_mode : Icons.dark_mode),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
